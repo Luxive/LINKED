@@ -1,1 +1,1 @@
-discord is https://discord.gg/DyHujhP5
+discord is (https://discord.gg/fAK8JARC)
