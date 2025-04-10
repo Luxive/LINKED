@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LINKED!</title>
     <style>
-        /* ... (same CSS as before, unchanged) ... */
         #loading-screen {
             position: fixed;
             top: 0;
@@ -104,6 +103,7 @@
         }
         .accordion.active:after {
             content: "\2212";
+            transform: translateX(3px);
         }
         .panel {
             padding: 0 18px;
@@ -130,7 +130,7 @@
             border: 10px; 
             padding: 5px;
             background-color: #444;
-            transition: 0.3s;
+            transition: 0.3;
         }
         .buttons:hover{
             transform: translateX(5px);
@@ -145,7 +145,6 @@
         <div id="loading-text">Loading...</div>
     </div>
 </div>
-
 <div id="content" style="display:none;">
     <div class="sidebar">
         <h2>LINKED!</h2>
@@ -158,6 +157,7 @@
         <a onclick="showSection('credits')">Credits</a>
     </div>
 
+    
     <div id="home" class="main-content active">
         <h1>Welcome to LINKED!</h1>
         <p>Join Discord or else gay <a href="https://discord.gg/fAK8JARC" target="_blank">Join</a></p>
@@ -165,6 +165,7 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLLGwZWkrIuvr4rZZQYsNwcHvW031548Q6NyJp_g7u6493Zg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 
+    
     <div id="proxies" class="main-content">
         <h1>Proxies</h1>
         <button class="accordion">Rammerhead</button>
@@ -176,43 +177,43 @@
         <div class="panel">
             <a href="#">Coming soon</a>
         </div>
-        <button class="accordion">Shadow browser (CLOSE POP UPS AND DONT FALL FOR THE FAKE ADS)</button>
+         <button class="accordion">Shadow browser(CLOSE POP UPS AND DONT FALL FOR THE FAKE ADS)</button>
         <div class="panel">
             <a href="https://phantom.lol/">Phantom Browser</a>
             <a href="https://csx6060coolbeansstore.artclass.site/">Art Browser</a>
-            <a href="https://excelwizard.space/en/room">Surfskip Browser</a>
-            <a href="https://excelwizard.space/en/app">Surfskip Browser 2</a>
-        </div>
-        <button class="accordion">Tinfoil</button> 
+            <a href="https://excelwizard.space/en/room"> Surfskip Browser</a>
+            <a href="https://excelwizard.space/en/app"> Surfskip Browser 2</a>
+        <div>
+         <button class="accordion">Tinfoil</button> 
         <div class="panel">
-            <a href="https://schoology.college/">Tinfoil</a>
+            <a href="https://schoology.college/">tinfoil</a>
             <a href="https://compsci.college/">Tinfoil 2</a> 
             <a href="https://spanish101.college/">Tinfoil 3</a>
-            <a href="https://commonapp.college/">Tinfoil 4</a>
-        </div>
+            <a href="https://commonapp.college/">Tinfoil 2</a>
+         </div>
         <button class="accordion">Make your own proxy</button>
         <div class="panel">
-            <a href="https://github.com/NebulaServices">Nebula Services proxy (GitHub)</a>
-            <a href="https://github.com/binary-person/rammerhead">Rammerhead proxy (GitHub)</a>
-            <a href="https://github.com/holy-unblocker/website-aio">Holy Unblocker proxy (GitHub)</a>
-            <a href="https://github.com/InterstellarNetwork/Interstellar">Interstellar proxy (GitHub)</a>
-            <a href="https://github.com/DogeNetwork/v4">Doge network (GitHub)</a>
-            <a href="https://github.com/UtopiaUnblocker/Utopia">Utopia Unblocker (GitHub)</a>
+            <a href="https://github.com/NebulaServices">Nebula Services proxy(github)</a>
+            <a href="https://github.com/binary-person/rammerhead">Rammerhead proxy(github)</a>
+            <a href="https://github.com/holy-unblocker/website-aio">Holy unblocker proxy(github)</a>
+            <a href="https://github.com/InterstellarNetwork/Interstellar">Interstellar proxy(github)</a>
+            <a href="https://github.com/DogeNetwork/v4">Doge network(github)</a>
+            <a href="https://github.com/UtopiaUnblocker/Utopia">utopia unblocker(github)</a>
         </div>
     </div>
 
-    <div id="games" class="main-content">
-        <h1>Games</h1>
-        <button class="accordion">Extreme math</button>
+   <div id="games" class="main-content">
+     <h1>games</h1>
+       <button class="accordion">Extreme math</button>
         <div class="panel">
             <a href="https://tutoring4free.org/">Extreme math Link 1</a>
-            <a href="https://easytutoring.app/">Extreme math Link 2</a>
-            <a href="https://extrememath.dev/">Extreme math Link 3</a>
-            <a href="https://simply-history.xyz/#google_vignette">Extreme math Link 4</a>
-            <a href="https://extrememath.org/">Extreme math Link 5</a>
-            <a href="https://simple-education.xyz/#google_vignette">Extreme math Link 6</a>
+            <a href="https://easytutoring.app/">Extreme math link 2</a>
+            <a href="https://extrememath.dev/">Extreme math link 3</a>
+            <a href="https://simply-history.xyz/#google_vignette">Extreme math link 4</a>
+            <a href="https://extrememath.org/">Extreme math link 5</a>
+            <a href="https://simple-education.xyz/#google_vignette">Extreme math link 6</a>9
         </div>
-        <button class="accordion">Minecraft</button>
+       <button class="accordion">Minecraft</button>
         <div class="panel">
             <a href="https://g.deev.is/">Minecraft link 1</a>
             <a href="https://eaglercraft.q13x.com/">Minecraft link 2</a>
@@ -235,7 +236,7 @@
         </div>
     </div>
 
-    <div id="movies" class="main-content">
+ <div id="movies" class="main-content">
         <h1>Movies</h1>
         <button class="accordion">Movies</button>
         <div class="panel">
@@ -245,20 +246,17 @@
             <a href="https://soap2day.ph/">Soap2day</a>
         </div>
     </div>
-
-    <div id="multipurpose" class="main-content">
-        <h1>Multi
     <div id="multipurpose" class="main-content">
         <h1>Multi Purpose (School)</h1>
         <button class="accordion">Tools</button>
         <div class="panel">
-            <a href="https://chatgpt.com/">Chatgpt</a>
-            <a href="https://schoolcheats.net/deltamath">DeltaMath cheats</a>
-            <a href="blackbox.ai">Blackbox AI</a>
+            <a href="https://chatgpt.com/">ChatGPT</a>
+            <a href="https://schoolcheats.net/deltamath">DeltaMath Cheats</a>
+            <a href="https://blackbox.ai">Blackbox AI</a>
         </div>
     </div>
-
-<div id="coder" class="main-content">
+    
+    <div id="coder" class="main-content">
         <h1>Coder Stuff</h1>
         <button class="accordion">Coding Resources</button>
         <div class="panel">
@@ -287,6 +285,7 @@
         </div>
     </div>
   </div>
+
 
     <footer>
         <p>&copy; 2024 LINKED! | All Rights Reserved</p>
@@ -323,4 +322,3 @@
 </script>
 </body>
 </html>
-
