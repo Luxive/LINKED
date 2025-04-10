@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LINKED!</title>
     <style>
-        /* Loading screen */
+        /* Styles here remain the same as the previous code */
         #loading-screen {
             position: fixed;
             top: 0;
@@ -37,24 +37,18 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        
-        /* Body styling */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #1e1e1e;
             color: white;
-            transition: background-color 0.3s ease;
         }
-
-        /* Sidebar */
         .sidebar {
             height: 100vh;
-            width: 240px;
+            width: 220px;
             position: fixed;
             background-color: #2c2c2c;
             padding: 20px;
-            transition: transform 0.3s ease-in-out;
         }
         .sidebar h2 {
             color: #f1f1f1;
@@ -68,21 +62,18 @@
             text-decoration: none;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: 0.5s;
         }
         .sidebar a:hover {
             background-color: #444;
             transform: translateY(5px);
         }
-
-        /* Main content */
         .main-content {
             margin-left: 260px;
             padding: 20px;
             background-color: #262626;
             min-height: 100vh;
             display: none;
-            transition: all 0.3s ease;
         }
         .main-content.active {
             display: block;
@@ -91,8 +82,6 @@
             font-size: 2.5rem;
             color: #e5e5e5;
         }
-
-        /* Accordion styling */
         .accordion {
             width: 100%;
             background-color: #333;
@@ -102,18 +91,16 @@
             text-align: left;
             font-size: 18px;
             cursor: pointer;
-            transition: background-color 0.4s ease, transform 0.3s ease;
+            transition: 0.4s;
             background-color: transparent;
         }
         .accordion:hover {
             background-color: #444;
-            transform: scale(1.05);
         }
         .accordion:after {
             content: '\002B';
             font-size: 20px;
             float: right;
-            transition: transform 0.3s ease;
         }
         .accordion.active:after {
             content: "\2212";
@@ -125,47 +112,30 @@
             display: none;
             overflow: hidden;
             border-top: 1px solid #444;
-            transition: all 0.3s ease;
         }
         .panel a {
             display: block;
             color: #1abc9c;
             margin: 10px 0;
             text-decoration: none;
-            opacity: 0;
-            animation: fadeIn 0.5s forwards;
         }
         .panel a:hover {
             text-decoration: underline;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Footer styling */
         footer {
             margin-top: 40px;
             text-align: center;
             color: #ccc;
         }
-        footer a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        /* Buttons with hover effect */
-        .buttons {
-            border: 2px solid transparent;
-            padding: 10px 20px;
+        .buttons{
+            border: 10px; 
+            padding: 5px;
             background-color: #444;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            transition: 0.3;
         }
-        .buttons:hover {
-            background-color: #262626;
+        .buttons:hover{
             transform: translateX(5px);
+            background-color: #262626;
         }
     </style>
 </head>
@@ -179,23 +149,22 @@
 <div id="content" style="display:none;">
     <div class="sidebar">
         <h2>LINKED!</h2>
-        <a onclick="showSection('home')">Home</a>
-        <a onclick="showSection('proxies')">Proxies</a>
-        <a onclick="showSection('games')">Games</a>
-        <a onclick="showSection('movies')">Movies</a>
-        <a onclick="showSection('multipurpose')">School stuff</a>
-        <a onclick="showSection('coder')">Coder Stuff</a>
-        <a onclick="showSection('credits')">Credits</a>
+        <a href="javascript:void(0)" onclick="showSection('home')">Home</a>
+        <a href="javascript:void(0)" onclick="showSection('proxies')">Proxies</a>
+        <a href="javascript:void(0)" onclick="showSection('games')">Games</a>
+        <a href="javascript:void(0)" onclick="showSection('movies')">Movies</a>
+        <a href="javascript:void(0)" onclick="showSection('multipurpose')">School stuff</a>
+        <a href="javascript:void(0)" onclick="showSection('coder')">Coder Stuff</a>
+        <a href="javascript:void(0)" onclick="showSection('credits')">Credits</a>
     </div>
 
     <div id="home" class="main-content active">
         <h1>Welcome to LINKED!</h1>
-        <p>Join Discord or else <a href="https://discord.gg/fAK8JARC" target="_blank">Join</a></p>
+        <p>Join Discord or else gay <a href="https://discord.gg/fAK8JARC" target="_blank">Join</a></p>
         <p>If you have any questions or complaints fill out the form below.</p>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLLGwZWkrIuvr4rZZQYsNwcHvW031548Q6NyJp_g7u6493Zg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 
-    <!-- Other sections -->
     <div id="proxies" class="main-content">
         <h1>Proxies</h1>
         <button class="accordion">Rammerhead</button>
@@ -203,12 +172,62 @@
             <a href="https://studio.michiganbowling.com/">Rammerhead 1</a>
             <a href="https://mapsapp.realdeeptech.com/">Rammerhead 2</a>
         </div>
-        <!-- Additional buttons and panels as in your original content -->
+        <button class="accordion">Interstellar</button>
+        <div class="panel">
+            <a href="#">Coming soon</a>
+        </div>
+        <button class="accordion">Shadow browser(CLOSE POP UPS AND DONT FALL FOR THE FAKE ADS)</button>
+        <div class="panel">
+            <a href="https://phantom.lol/">Phantom Browser</a>
+            <a href="https://csx6060coolbeansstore.artclass.site/">Art Browser</a>
+            <a href="https://excelwizard.space/en/room"> Surfskip Browser</a>
+            <a href="https://excelwizard.space/en/app"> Surfskip Browser 2</a>
+        </div>
+        <button class="accordion">Tinfoil</button> 
+        <div class="panel">
+            <a href="https://schoology.college/">Tinfoil</a>
+            <a href="https://compsci.college/">Tinfoil 2</a> 
+            <a href="https://spanish101.college/">Tinfoil 3</a>
+            <a href="https://commonapp.college/">Tinfoil 4</a>
+        </div>
+        <button class="accordion">Make your own proxy</button>
+        <div class="panel">
+            <a href="https://github.com/NebulaServices">Nebula Services proxy(github)</a>
+            <a href="https://github.com/binary-person/rammerhead">Rammerhead proxy(github)</a>
+            <a href="https://github.com/holy-unblocker/website-aio">Holy unblocker proxy(github)</a>
+            <a href="https://github.com/InterstellarNetwork/Interstellar">Interstellar proxy(github)</a>
+            <a href="https://github.com/DogeNetwork/v4">Doge network(github)</a>
+            <a href="https://github.com/UtopiaUnblocker/Utopia">Utopia unblocker(github)</a>
+        </div>
     </div>
 
+    <div id="games" class="main-content">
+        <h1>Games</h1>
+        <button class="accordion">Extreme math</button>
+        <div class="panel">
+            <a href="https://tutoring4free.org/">Extreme math Link 1</a>
+            <a href="https://easytutoring.app/">Extreme math Link 2</a>
+            <a href="https://extrememath.dev/">Extreme math Link 3</a>
+            <a href="https://simply-history.xyz/#google_vignette">Extreme math Link 4</a>
+            <a href="https://extrememath.org/">Extreme math Link 5</a>
+            <a href="https://simple-education.xyz/#google_vignette">Extreme math Link 6</a>
+        </div>
+        <button class="accordion">Minecraft</button>
+        <div class="panel">
+            <a href="https://g.deev.is/">Minecraft Link 1</a>
+            <a href="https://eaglercraft.q13x.com/">Minecraft Link 2</a>
+            <a href="https://ubg100.github.io/eaglercraft.html">Minecraft Link 3</a>
+            <a href="https://burritoedition.github.io/emu/Minecraft/web/index.html">Minecraft Link 4</a>
+            <a href="https://reslauncher.vercel.app/">Minecraft Link 5</a>
+            <a href="https://sd592g.github.io/zj684od4lfg/">Minecraft Link 6</a>
+        </div>
+    </div>
+
+    <!-- Remaining sections for Movies, School stuff, etc... -->
+    
     <footer>
         <p>&copy; 2024 LINKED! | All Rights Reserved</p>
-        <p>Join Discord or else <a href="https://discord.gg/fAK8JARC" target="_blank">Join</a></p>
+        <p>Join Discord or else gay <a href="https://discord.gg/fAK8JARC" target="_blank">Join</a></p>
     </footer>
 </div>
 
@@ -216,9 +235,9 @@
     function showSection(sectionId) {
         var sections = document.getElementsByClassName("main-content");
         for (var i = 0; i < sections.length; i++) {
-            sections[i].style.display = "none";
+            sections[i].classList.remove("active");
         }
-        document.getElementById(sectionId).style.display = "block";
+        document.getElementById(sectionId).classList.add("active");
     }
 
     window.addEventListener("load", function() {
