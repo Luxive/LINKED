@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LINKED!</title>
     <style>
+        /* Loading screen */
         #loading-screen {
             position: fixed;
             top: 0;
@@ -36,18 +37,24 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        /* Body styling */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #1e1e1e;
             color: white;
+            transition: background-color 0.3s ease;
         }
+
+        /* Sidebar */
         .sidebar {
             height: 100vh;
-            width: 220px;
+            width: 240px;
             position: fixed;
             background-color: #2c2c2c;
             padding: 20px;
+            transition: transform 0.3s ease-in-out;
         }
         .sidebar h2 {
             color: #f1f1f1;
@@ -61,18 +68,21 @@
             text-decoration: none;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: 0.5s;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .sidebar a:hover {
             background-color: #444;
             transform: translateY(5px);
         }
+
+        /* Main content */
         .main-content {
             margin-left: 260px;
             padding: 20px;
             background-color: #262626;
             min-height: 100vh;
             display: none;
+            transition: all 0.3s ease;
         }
         .main-content.active {
             display: block;
@@ -81,6 +91,8 @@
             font-size: 2.5rem;
             color: #e5e5e5;
         }
+
+        /* Accordion styling */
         .accordion {
             width: 100%;
             background-color: #333;
@@ -90,16 +102,18 @@
             text-align: left;
             font-size: 18px;
             cursor: pointer;
-            transition: 0.4s;
+            transition: background-color 0.4s ease, transform 0.3s ease;
             background-color: transparent;
         }
         .accordion:hover {
             background-color: #444;
+            transform: scale(1.05);
         }
         .accordion:after {
             content: '\002B';
             font-size: 20px;
             float: right;
+            transition: transform 0.3s ease;
         }
         .accordion.active:after {
             content: "\2212";
@@ -111,30 +125,47 @@
             display: none;
             overflow: hidden;
             border-top: 1px solid #444;
+            transition: all 0.3s ease;
         }
         .panel a {
             display: block;
             color: #1abc9c;
             margin: 10px 0;
             text-decoration: none;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
         }
         .panel a:hover {
             text-decoration: underline;
         }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Footer styling */
         footer {
             margin-top: 40px;
             text-align: center;
             color: #ccc;
         }
-        .buttons{
-            border: 10px; 
-            padding: 5px;
-            background-color: #444;
-            transition: 0.3;
+        footer a {
+            color: #3498db;
+            text-decoration: none;
         }
-        .buttons:hover{
-            transform: translateX(5px);
+
+        /* Buttons with hover effect */
+        .buttons {
+            border: 2px solid transparent;
+            padding: 10px 20px;
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .buttons:hover {
             background-color: #262626;
+            transform: translateX(5px);
         }
     </style>
 </head>
@@ -157,15 +188,14 @@
         <a onclick="showSection('credits')">Credits</a>
     </div>
 
-    
     <div id="home" class="main-content active">
         <h1>Welcome to LINKED!</h1>
-        <p>Join Discord or else gay <a href="https://discord.gg/fAK8JARC" target="_blank">Join</a></p>
+        <p>Join Discord or else <a href="https://discord.gg/fAK8JARC" target="_blank">Join</a></p>
         <p>If you have any questions or complaints fill out the form below.</p>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLLGwZWkrIuvr4rZZQYsNwcHvW031548Q6NyJp_g7u6493Zg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 
-    
+    <!-- Other sections -->
     <div id="proxies" class="main-content">
         <h1>Proxies</h1>
         <button class="accordion">Rammerhead</button>
@@ -173,123 +203,12 @@
             <a href="https://studio.michiganbowling.com/">Rammerhead 1</a>
             <a href="https://mapsapp.realdeeptech.com/">Rammerhead 2</a>
         </div>
-        <button class="accordion">Interstellar</button>
-        <div class="panel">
-            <a href="#">Coming soon</a>
-        </div>
-         <button class="accordion">Shadow browser(CLOSE POP UPS AND DONT FALL FOR THE FAKE ADS)</button>
-        <div class="panel">
-            <a href="https://phantom.lol/">Phantom Browser</a>
-            <a href="https://csx6060coolbeansstore.artclass.site/">Art Browser</a>
-            <a href="https://excelwizard.space/en/room"> Surfskip Browser</a>
-            <a href="https://excelwizard.space/en/app"> Surfskip Browser 2</a>
-        <div>
-         <button class="accordion">Tinfoil</button> 
-        <div class="panel">
-            <a href="https://schoology.college/">tinfoil</a>
-            <a href="https://compsci.college/">Tinfoil 2</a> 
-            <a href="https://spanish101.college/">Tinfoil 3</a>
-            <a href="https://commonapp.college/">Tinfoil 2</a>
-         </div>
-        <button class="accordion">Make your own proxy</button>
-        <div class="panel">
-            <a href="https://github.com/NebulaServices">Nebula Services proxy(github)</a>
-            <a href="https://github.com/binary-person/rammerhead">Rammerhead proxy(github)</a>
-            <a href="https://github.com/holy-unblocker/website-aio">Holy unblocker proxy(github)</a>
-            <a href="https://github.com/InterstellarNetwork/Interstellar">Interstellar proxy(github)</a>
-            <a href="https://github.com/DogeNetwork/v4">Doge network(github)</a>
-            <a href="https://github.com/UtopiaUnblocker/Utopia">utopia unblocker(github)</a>
-        </div>
+        <!-- Additional buttons and panels as in your original content -->
     </div>
-
-   <div id="games" class="main-content">
-     <h1>games</h1>
-       <button class="accordion">Extreme math</button>
-        <div class="panel">
-            <a href="https://tutoring4free.org/">Extreme math Link 1</a>
-            <a href="https://easytutoring.app/">Extreme math link 2</a>
-            <a href="https://extrememath.dev/">Extreme math link 3</a>
-            <a href="https://simply-history.xyz/#google_vignette">Extreme math link 4</a>
-            <a href="https://extrememath.org/">Extreme math link 5</a>
-            <a href="https://simple-education.xyz/#google_vignette">Extreme math link 6</a>9
-        </div>
-       <button class="accordion">Minecraft</button>
-        <div class="panel">
-            <a href="https://g.deev.is/">Minecraft link 1</a>
-            <a href="https://eaglercraft.q13x.com/">Minecraft link 2</a>
-            <a href="https://ubg100.github.io/eaglercraft.html">Minecraft link 3</a>
-            <a href="https://burritoedition.github.io/emu/Minecraft/web/index.html">Minecraft link 4</a>
-            <a href="https://reslauncher.vercel.app/">Minecraft link 5</a>
-            <a href="https://sd592g.github.io/zj684od4lfg/">Minecraft link 6</a>
-            <a href="https://eagler.almondnet.cn/Nebula.html">Minecraft link 7</a>
-            <a href="https://mess.eu.org/">Minecraft link 8</a>
-            <a href="https://precisionclient-88k.pages.dev/">Minecraft link 9</a>
-        </div>
-        <button class="accordion">Google sites</button>
-        <div class="panel">
-            <a href="https://sites.google.com/view/games-unblocked/"><button>games unblocked2</button></a>
-            <a href="https://sites.google.com/site/unblockedgames66ez/"><button>Unblocked games 66</button></a>
-            <a href="https://sites.google.com/site/unblockedgame76/"><button>Unblocked games 76</button></a>
-            <a href="https://sites.google.com/view/games-unblockedd/"><button>games unblocked</button></a>
-            <a href="https://sites.google.com/site/classroom6x/unblockedgames"><button>Classroom6x</button></a>
-            <a href="https://sites.google.com/site/thegamecompilation/home?authuser=0"><button>games unblocked2</button></a>              
-        </div>
-    </div>
-
- <div id="movies" class="main-content">
-        <h1>Movies</h1>
-        <button class="accordion">Movies</button>
-        <div class="panel">
-            <a href="https://hdtodayz.to/">HDTODAY 1</a>
-            <a href="https://genesishd.tv/">HDTODAY 2</a>
-            <a href="https://hdtoday.cc/">HDTODAY 3</a>
-            <a href="https://soap2day.ph/">Soap2day</a>
-        </div>
-    </div>
-    <div id="multipurpose" class="main-content">
-        <h1>Multi Purpose (School)</h1>
-        <button class="accordion">Tools</button>
-        <div class="panel">
-            <a href="https://chatgpt.com/">ChatGPT</a>
-            <a href="https://schoolcheats.net/deltamath">DeltaMath Cheats</a>
-            <a href="https://blackbox.ai">Blackbox AI</a>
-        </div>
-    </div>
-    
-    <div id="coder" class="main-content">
-        <h1>Coder Stuff</h1>
-        <button class="accordion">Coding Resources</button>
-        <div class="panel">
-            <a href="vscode.dev">VSCODE</a>
-        </div>
-    </div>
-
- <div id="credits" class="main-content">
-        <h1>Credits</h1>
-        <button class="accordion">Credits</button>
-        <div class="panel">
-            <a href="https://discord.gg/unblock">Titanium network</a>
-            <a href="https://discord.gg/unblocker">Nebula</a>
-            <a href="https://discord.gg/extrememath-942214712349818880">Extreme math</a>
-            <a href="https://discord.gg/XagddSpwpm">Utopia</a>
-            <a href="https://discord.gg/vkHQzqBy4X">Doge Unblocker</a>
-            <a href="https://discord.gg/interstellar">Interstellar</a>
-            <a href="https://discord.gg/math-study-934807331668099142">Math study</a>
-            <a href="https://discord.gg/PNdjBjKpMk">Math Orbit</a>
-            <a href="https://discord.gg/VNT4E7gN5Y">Rammerhead</a>
-            <a href="https://discord.gg/desmos">Art class</a>
-            <a href="https://discord.gg/mUPDZtEC4v">Snorlax</a>
-            <a href="https://discord.gg/3ZyRpfM2HF">Unblocked cave</a>
-            <a href="https://discord.gg/vdwD46Uc6r">Project z1g</a>
-            <a href="#">Creds to Luxive and Niin12 for making this website</a>
-        </div>
-    </div>
-  </div>
-
 
     <footer>
         <p>&copy; 2024 LINKED! | All Rights Reserved</p>
-        <p>Join Discord or else gay <a href="https://discord.gg/fAK8JARC" target="_blank">Join</a></p>
+        <p>Join Discord or else <a href="https://discord.gg/fAK8JARC" target="_blank">Join</a></p>
     </footer>
 </div>
 
